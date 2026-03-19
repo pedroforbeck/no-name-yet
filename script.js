@@ -22,3 +22,14 @@ document.addEventListener('mousemove', e => {
         setTimeout(() => dot.remove(), 420);
     }
 });
+
+//algumas scripts pros sprites mais tarde
+document.querySelectorAll('a, .sprite, button').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+});
+
+document.getElementById('sprite-p1').addEventListener('mouseenter', () => cursor.style.background = 'var(--yellow)');
+document.getElementById('sprite-p1').addEventListener('mouseleave', () => cursor.style.background = '');
+document.getElementById('sprite-p2').addEventListener('mouseenter', () => cursor.style.background = '#2a6de8');
+document.getElementById('sprite-p2').addEventListener('mouseleave', () => cursor.style.background = '');
